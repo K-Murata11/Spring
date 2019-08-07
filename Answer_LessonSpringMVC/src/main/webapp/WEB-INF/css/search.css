@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+/* タイトル */
+
+/* ボタン */
+.divbuttun{
+	height: 70px;
+}
+.textSubmit:active{
+	top: 4px;
+    text-shadow: none;
+}
+.submit{
+	position: relative;
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background: #03A9F4;/*色*/
+    border: solid 1px #0f9ada;/*線色*/
+    border-radius: 4px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+    text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+}
+.submit:active{
+	border: solid 1px #03A9F4;
+    box-shadow: none;
+    text-shadow: none;
+}
+/* テーブル */
+
+
+table.table01 {
+	width: 90%;
+	border-right:#3EB1C6 solid 1px;
+	border-collapse: collapse;
+}
+table.table01 thead th {
+	background:#3EB1C6;
+	color:#FFF;
+	padding:10px 15px;
+	border-right:#FFF solid 1px;
+	border-bottom:#FFF solid 1px;
+}
+table.table01 thead th:last-child {
+	border-right:#3EB1C6 solid 1px;
+}
+table.table01 tbody th {
+	background:#3EB1C6;
+	color:#FFF;
+	padding:10px 15px;
+	border-bottom:#FFF solid 1px;
+	vertical-align:top;
+}
+table.table01 tbody tr:last-child th {
+	border-bottom:#3EB1C6 solid 1px;
+}
+table.table01 tbody td {
+	background:#FFF;
+	padding:10px 15px;
+	border-left:#3EB1C6 solid 1px;
+	border-bottom:#3EB1C6 solid 1px;
+/* 	vertical-align:top; */
+}
+ 
+@media screen and (max-width: 640px) {
+table.table01 thead {
+	display:none;
+}
+table.table01 tbody th {
+	display:block;
+}
+table.table01 tbody td {
+	display:block;
+}
+table.table01 tbody td::before {
+	content: attr(label);
+	float: left;
+	clear:both;
+	font-weight:bold;
+}
+table.table01 tbody td p {
+	padding-left:6em;
+}
