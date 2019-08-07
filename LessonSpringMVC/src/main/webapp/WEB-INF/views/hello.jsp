@@ -5,6 +5,6 @@
 	<title>Hello</title>
 </head>
 <body>
-<P><c:out value="${message}" /> </P>
+<P>${message}</P>
 </body>
 </html>

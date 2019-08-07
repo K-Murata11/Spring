@@ -14,7 +14,7 @@ public class HelloController {
 	@RequestMapping(value = "/hello", method = RequestMethod.GET)
 		public String hello(Model model) {
 		// model‚Á‚Æ‚¢‚¤” ‚Émessage‚Æ‚¢‚¤–¼‘O‚Å Hello Spring! ‚Æ‚¢‚¤•¶š—ñ‚ğŠi”[‚µ‚Ä‚¢‚é
-		model.addAttribute("message", "Hello Spring!" );
+		model.addAttribute("message", "<script>alert()</script>" );
 		// hello.jsp‚Ö‘JˆÚ‚·‚éi‘å•¶š¬•¶š‚Í‹æ•Ê‚³‚ê‚éj
 		return "hello";
 	}
