@@ -13,9 +13,27 @@
 		<c:out value="${message}" />
 	</p>
 	<form:form modelAttribute="productForm">
-	名前<form:input path="name" placeholder="名前を入力してください"/><br>
-	価格<form:input path="price" placeholder="0"/><br>
-	<input type="submit" value="送信" /><br>
+	名前<form:input path="name" placeholder="名前を入力してください" />
+		<br>
+	価格<form:input path="price" placeholder="0" />
+		<br>
+		<input type="submit" value="送信" />
+		<br>
 	</form:form>
+
+	<c:if test="${not empty productList}">
+		<table border="1">
+			<tr>
+				<th>名前</th>
+				<th>価格</th>
+			</tr>
+			<c:forEach var="productForm" items="${productList}">
+				<tr>
+					<td><c:out value="${productForm.name}" /></td>
+					<td><c:out value="${productForm.price}" /></td>
+				</tr>
+			</c:forEach>
+		</table>
+	</c:if>
 </body>
 </html>
