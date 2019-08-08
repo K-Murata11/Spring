@@ -1,4 +1,4 @@
-package jp_co.good_works.lesson;
+package jp_co.good_works.lesson.springmvc.controller;
 
 import java.text.DateFormat;
 import java.util.Date;
