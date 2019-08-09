@@ -8,6 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 
 import jp_co.good_works.lesson.springmvc.form.ProductForm;
 
@@ -27,9 +29,9 @@ public class ProductController {
 	}
 
 	@RequestMapping(value = "/product", method = RequestMethod.POST)
-	public String product(Model model, @ModelAttribute ProductForm form) {
-		if (form.getName () == null || form.getPrice () == null) {
-			model.addAttribute("message", "商品情報が空です");
+	public String product(Model model, @Validated @ModelAttribute ProductForm form, BindingResult result) {
+		if (result.hasErrors()) {
+			model.addAttribute("message", "エラーを検出しました");
 		} else {
 			model.addAttribute("message", "商品が入力されました");
 			productList.add(form);
