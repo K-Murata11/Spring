@@ -14,8 +14,10 @@
 	</p>
 	<form:form modelAttribute="productForm">
 	名前<form:input path="name" placeholder="名前を入力してください" />
+		<form:errors path="name" cssStyle="color:red;" />
 		<br>
 	価格<form:input path="price" placeholder="0" />
+		<form:errors path="price" cssStyle="color:red;" />
 		<br>
 		<input type="submit" value="送信" />
 		<br>
