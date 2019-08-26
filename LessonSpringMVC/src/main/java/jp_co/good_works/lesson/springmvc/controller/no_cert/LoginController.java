@@ -1,8 +1,5 @@
 package jp_co.good_works.lesson.springmvc.controller.no_cert;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.security.auth.login.LoginException;
 
 import org.springframework.context.annotation.Scope;
